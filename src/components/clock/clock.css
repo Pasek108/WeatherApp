@@ -1,0 +1,76 @@
+.clock {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  font-size: 1.8rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.clock h4 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.clock .time {
+  font-size: 2rem;
+}
+
+.clock .sunrise-sunset {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.clock .sunrise-sunset div {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.clock .show-current-weather {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #fff700;
+  cursor: pointer;
+}
+
+.clock .show-current-weather:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 690px) {
+  .clock {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0 0.5rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #233a5c;
+  }
+
+  .clock h4 {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .clock .date,
+  .clock .time {
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+  }
+
+  .clock .sunrise-sunset div {
+    margin-top: 0.25rem;
+  }
+
+  .clock .show-current-weather {
+    margin-top: 0.25rem;
+  }
+}

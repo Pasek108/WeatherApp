@@ -1,61 +1,19 @@
-* {
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
-}
-
-html {
-  font-size: 16px;
-  background-image: url(./bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 10%;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  background: #00000033;
-  color: white;
-}
-
-.blur {
-  backdrop-filter: blur(3px);
-  border: 1px solid #00000000;
-  border-radius: 1rem;
-  background-color: #ffffff26;
-  box-shadow: 2px 2px 4px #00000040;
-  transition: 0.1s;
-  cursor: pointer;
-}
-
-.blur:hover {
-  background-color: #ffffff33;
-  border: 1px solid #ffffff86;
-}
-
-input {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-}
-
 main {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1350px;
+  padding: 1rem 2rem;
 }
 
 .main-content {
@@ -69,64 +27,8 @@ main {
   margin-bottom: 1rem;
 }
 
-
-@media only screen and (max-width: 900px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media only screen and (max-width: 755px) {
-  html {
-    font-size: 14px;
-  }
-}
-
 @media only screen and (max-width: 690px) {
   header {
     margin-top: 5rem;
-  }
-
-  .clock {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    text-align: center;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: #233a5c;
-  }
-
-  .clock h4 {
-    text-align: left;
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .clock .date {
-    font-size: 1.2rem;
-  }
-
-  .clock .time {
-    font-size: 1.2rem;
-    margin-right: 0.5rem;
-  }
-
-  .clock .sunrise-sunset div {
-    margin-top: 0;
-  }
-
-  .clock .sunrise-sunset {
-    margin-right: 0.5rem;
-  }
-
-  .clock .show-current-weather {
-    margin-top: 0;
   }
 }

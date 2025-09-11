@@ -1,0 +1,65 @@
+.weather {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+  height: fit-content;
+  font-size: 1.1rem;
+}
+
+.weather .row {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.weather .col {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.weather .day-weather {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.weather .day-weather div {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 1rem;
+  text-transform: capitalize;
+}
+
+.weather-description {
+  font-size: 1.5rem;
+}
+
+.weather-details .col {
+  margin-right: 2rem;
+}
+
+.weather-details .col > div {
+  margin-top: 0.5rem;
+}
+
+.weather-details i {
+  margin-right: 0.5rem;
+}
+
+.weather .feels-like {
+  color: #dbdbdb;
+}

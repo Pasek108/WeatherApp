@@ -1,0 +1,47 @@
+.forecast {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1350px;
+  height: fit-content;
+  margin: 1rem 0;
+  color: white;
+  overflow-x: hidden;
+}
+
+.forecast-card {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  min-width: 300px;
+  height: fit-content;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.forecast-card .icon {
+  font-size: 4rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.temperature-container {
+  font-size: 1.2rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.temperature-container .temperature {
+  margin-right: 1rem;
+}
+
+.temperature-container .feels-like {
+  color: #e3e3e3;
+}

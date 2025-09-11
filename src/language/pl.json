@@ -1,0 +1,19 @@
+{
+  "lang": "pl",
+  "words": {
+    "change_localisation": "Zmień lokalizacje",
+    "feels_like": "Odczuwalna: ",
+    "humidity": "Wilgotność: ",
+    "pressure": "Ciśnienie: ",
+    "clouds": "Zachmurzenie: ",
+    "visibility": "Widoczność: ",
+    "wind_speed": "Prędkość wiatru: ",
+    "beaufort_scale": "W skali Beauforta: ",
+    "actual_time": "Aktualny czas:",
+    "show_actual_weather": "Pokaż aktualną pogode",
+    "surise": "wschód słońca",
+    "sunset": "zachód słońca",
+    "now": "Teraz",
+    "day_names": ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"]
+  }
+}

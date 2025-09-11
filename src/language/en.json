@@ -1,0 +1,19 @@
+{
+  "lang": "en",
+  "words": {
+    "change_localisation": "Change localisation",
+    "feels_like": "Feels like: ",
+    "humidity": "Humidity: ",
+    "pressure": "Pressure: ",
+    "clouds": "Clouds: ",
+    "visibility": "Visibility: ",
+    "wind_speed": "Wind speed: ",
+    "beaufort_scale": "Beaufort scale: ",
+    "actual_time": "Current time",
+    "show_actual_weather": "Show current weather",
+    "surise": "sunrise",
+    "sunset": "sunset",
+    "now": "Now",
+    "day_names": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  }
+}
