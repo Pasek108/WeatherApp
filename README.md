@@ -60,4 +60,5 @@ Programs:
 - Deployment for GitHub:
   - Run `npm run build`
   - Rename generated `/dist` folder to `/docs`
-  - In `/docs/index.html` and `/docs/index-***.css` file replace all `/assets/` with `/Weather/assets/`
+  - In `/docs/index.html` change `/favicon.ico` to `/Weather/favicon.ico` and all `/assets/...` to `/Weather/assets/...`
+  - In `/docs/index-***.css` replace all `/assets/` with `/Weather/assets/`
