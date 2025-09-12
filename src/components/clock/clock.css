@@ -46,13 +46,13 @@
     left: 0;
     top: 0;
     z-index: 2;
-    text-align: center;
     flex-flow: row wrap;
     align-items: center;
     gap: 0 0.5rem;
     width: 100%;
     padding: 1rem 2rem;
     background-color: #233a5c;
+    text-align: center;
   }
 
   .clock h4 {
@@ -72,5 +72,11 @@
 
   .clock .show-current-weather {
     margin-top: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .clock {
+    padding: 1rem;
   }
 }

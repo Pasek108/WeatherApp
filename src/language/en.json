@@ -1,19 +1,44 @@
 {
-  "lang": "en",
-  "words": {
-    "change_localisation": "Change localisation",
-    "feels_like": "Feels like: ",
-    "humidity": "Humidity: ",
-    "pressure": "Pressure: ",
-    "clouds": "Clouds: ",
-    "visibility": "Visibility: ",
-    "wind_speed": "Wind speed: ",
-    "beaufort_scale": "Beaufort scale: ",
-    "actual_time": "Current time",
-    "show_actual_weather": "Show current weather",
-    "surise": "sunrise",
-    "sunset": "sunset",
+  "time": {
     "now": "Now",
+    "actual_time": "Current time",
     "day_names": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  },
+  "weather": {
+    "temperature": "Temperature",
+    "feels_like": "Feels like",
+    "humidity": "Humidity",
+    "pressure": "Pressure",
+    "clouds": "Clouds",
+    "visibility": "Visibility",
+    "wind_speed": "Wind speed",
+    "beaufort_scale": "Beaufort scale",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset"
+  },
+  "summary": {
+    "light_rain": "Drizzle",
+    "moderate_rain": "Light rain",
+    "heavy_rain": "Heavy rain",
+    "light_snow": "Light snow",
+    "moderate_snow": "Snow",
+    "heavy_snow": "Heavy snow",
+    "sleet": "Sleet",
+    "hail": "Hail",
+    "mixed_precipitation": "Mixed precipitation",
+    "fog": "Fog",
+    "breezy": "Breezy",
+    "windy": "Windy",
+    "strong_wind": "Strong wind",
+    "partly_cloudy": "Partly cloudy",
+    "mostly_cloudy": "Mostly cloudy",
+    "overcast": "Overcast",
+    "clear_day": "Clear",
+    "clear_night": "Clear night",
+    "unknown": "Unknown conditions"
+  },
+  "commands": {
+    "change_localisation": "Change location",
+    "show_actual_weather": "Show current weather"
   }
 }

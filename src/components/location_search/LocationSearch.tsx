@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, type JSX } from "react"
 
 import "./location_search.css"
 
@@ -14,61 +14,63 @@ type LocationSearchProps = {
 }
 
 export default function LocationSearch(props: LocationSearchProps) {
-  const [locations, setLocations] = useState<React.JSX.Element[]>([])
-  const [locationStr, setLocationStr] = useState("")
+  const [locations_list, setLocationsList] = useState<React.JSX.Element[]>([])
+  const [searched_location, setSearchedLocation] = useState("")
   const searchInput = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    setLocationStr(`${props.location.toponymName}, ${props.location.adminName1}, ${props.location.countryName}`)
+    setSearchedLocation(getLocationString(props.location))
   }, [props.location])
 
   useEffect(() => {
-    function handleClickOutside(evt: MouseEvent) {
-      if (searchInput.current && !searchInput.current.contains(evt.target as Node)) {
-        setLocations([])
-        setLocationStr(`${props.location.toponymName}, ${props.location.adminName1}, ${props.location.countryName}`)
-      }
-    }
-
     document.addEventListener("click", handleClickOutside)
+    return () => document.removeEventListener("click", handleClickOutside)
+  }, [])
 
-    return () => {
-      document.removeEventListener("click", handleClickOutside)
+  function handleClickOutside(evt: MouseEvent) {
+    if (searchInput.current && !searchInput.current.contains(evt.target as Node)) {
+      setSearchedLocation(getLocationString(props.location))
+      setLocationsList([])
     }
-  }, [props.location])
+  }
 
-  async function showLocations(searchValue: string) {
-    setLocationStr(searchValue)
+  async function showPossibleLocations(searchValue: string) {
+    setSearchedLocation(searchValue)
 
-    if (searchValue.length < 3) {
-      setLocations([])
-      return
-    }
+    if (searchValue.length < 3) return setLocationsList([])
 
     const foundLocations = await getLocations(searchValue, localStorage.getItem("language") || "en")
-
-    const possibleLocations = foundLocations.map((location) => (
-      <div
-        key={JSON.stringify(location)}
-        className="location"
-        onClick={() => {
-          props.loadWeatherForLocation(location)
-          setLocations([])
-        }}
-      >
-        {location.toponymName},&nbsp;
-        {location.adminName1},&nbsp;
-        {location.countryName}
-      </div>
-    ))
-
-    setLocations(possibleLocations)
+    const possibleLocations = convertLocationsToOptions(foundLocations, props.loadWeatherForLocation, setLocationsList)
+    setLocationsList(possibleLocations)
   }
 
   return (
     <div className="location-search">
-      <input ref={searchInput} className="search blur" id="location-search" type="text" onClick={() => setLocationStr("")} value={locationStr} onChange={(evt) => showLocations(evt.target.value)} placeholder={props.lang.words.change_localisation} />
-      <div className={`locations ${locations.length ? "active" : ""}`}>{locations}</div>
+      <input ref={searchInput} className="search blur" id="location-search" type="text" onClick={() => setSearchedLocation("")} value={searched_location} onChange={(evt) => showPossibleLocations(evt.target.value)} placeholder={props.lang.commands.change_localisation} />
+      <div className={`locations ${locations_list.length ? "active" : ""}`}>{locations_list}</div>
     </div>
   )
+}
+
+/* ------------------------ helper functions ------------------------ */
+
+function getLocationString(location: GeoName): string {
+  return `${location.toponymName}, ${location.adminName1}, ${location.countryName}`
+}
+
+function convertLocationsToOptions(locations: GeoName[], loadWeatherCallback: (location: GeoName) => void, setLocationsListCallback: (value: React.SetStateAction<JSX.Element[]>) => void): JSX.Element[] {
+  return locations.map((location) => {
+    const optionClickCallback = () => {
+      loadWeatherCallback(location)
+      setLocationsListCallback([])
+    }
+
+    return (
+      <div key={JSON.stringify(location)} className="location" onClick={optionClickCallback}>
+        {location.toponymName},&nbsp;
+        {location.adminName1},&nbsp;
+        {location.countryName}
+      </div>
+    )
+  })
 }

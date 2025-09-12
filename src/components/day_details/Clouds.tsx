@@ -8,8 +8,7 @@ type CloudsProps = {
 export default function Clouds(props: CloudsProps) {
   return (
     <div className="clouds">
-      {props.lang.words.clouds}
-      {props.clouds.toFixed(2)}%
+      {props.lang.weather.clouds}: {props.clouds}%
     </div>
   )
 }

@@ -1,19 +1,44 @@
 {
-  "lang": "pl",
-  "words": {
-    "change_localisation": "Zmień lokalizacje",
-    "feels_like": "Odczuwalna: ",
-    "humidity": "Wilgotność: ",
-    "pressure": "Ciśnienie: ",
-    "clouds": "Zachmurzenie: ",
-    "visibility": "Widoczność: ",
-    "wind_speed": "Prędkość wiatru: ",
-    "beaufort_scale": "W skali Beauforta: ",
-    "actual_time": "Aktualny czas:",
-    "show_actual_weather": "Pokaż aktualną pogode",
-    "surise": "wschód słońca",
-    "sunset": "zachód słońca",
+  "time": {
     "now": "Teraz",
+    "actual_time": "Aktualny czas",
     "day_names": ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"]
+  },
+  "weather": {
+    "temperature": "Temperatura",
+    "feels_like": "Odczuwalna",
+    "humidity": "Wilgotność",
+    "pressure": "Ciśnienie",
+    "clouds": "Zachmurzenie",
+    "visibility": "Widoczność",
+    "wind_speed": "Prędkość wiatru",
+    "beaufort_scale": "W skali Beauforta",
+    "sunrise": "Wschód słońca",
+    "sunset": "Zachód słońca"
+  },
+  "summary": {
+    "light_rain": "Mżawka",
+    "moderate_rain": "Lekki deszcz",
+    "heavy_rain": "Ulewny deszcz",
+    "light_snow": "Lekkie opady śniegu",
+    "moderate_snow": "Śnieg",
+    "heavy_snow": "Śnieżyca",
+    "sleet": "Deszcz ze śniegiem",
+    "hail": "Grad",
+    "mixed_precipitation": "Opady mieszane",
+    "fog": "Mgła",
+    "breezy": "Lekki wiatr",
+    "windy": "Wiatr",
+    "strong_wind": "Silny wiatr",
+    "partly_cloudy": "Częściowe zachmurzenie",
+    "mostly_cloudy": "Przeważnie pochmurno",
+    "overcast": "Całkowite zachmurzenie",
+    "clear_day": "Słonecznie",
+    "clear_night": "Bezchmurna noc",
+    "unknown": "Nieznane warunki"
+  },
+  "commands": {
+    "change_localisation": "Zmień lokalizację",
+    "show_actual_weather": "Pokaż aktualną pogodę"
   }
 }

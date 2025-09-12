@@ -6,12 +6,9 @@ type CloudsProps = {
 }
 
 export default function Visibility(props: CloudsProps) {
-  const visibility = `${props.visibility}m`
-
   return (
     <div className="visibility">
-      {props.lang.words.visibility}
-      {props.visibility != null ? visibility : <i className="wi wi-na"></i>}
+      {props.lang.weather.visibility}: {props.visibility}m
     </div>
   )
 }

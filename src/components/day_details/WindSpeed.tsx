@@ -10,16 +10,16 @@ export default function WindSpeed(props: WindSpeedProps) {
   return (
     <>
       <div className="wind">
-        {props.lang.words.wind_speed}
-        {props.wind_speed} km/h <i className={`wi wi-wind from-${props.wind_deg}-deg`}></i>
+        {props.lang.weather.wind_speed}: {props.wind_speed} km/h <i className={`wi wi-wind from-${props.wind_deg}-deg`}></i>
       </div>
       <div className="beaufort">
-        {props.lang.words.beaufort_scale}
-        <i className={`wi wi-wind-beaufort-${beaufort_scale(props.wind_speed)}`}></i>
+        {props.lang.weather.beaufort_scale}: <i className={`wi wi-wind-beaufort-${beaufort_scale(props.wind_speed)}`}></i>
       </div>
     </>
   )
 }
+
+/* ------------------------ helper functions ------------------------ */
 
 function beaufort_scale(wind_spped: number) {
   if (wind_spped < 2) return 0

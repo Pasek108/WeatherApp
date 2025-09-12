@@ -8,8 +8,8 @@ type HumidityProps = {
 export default function Humidity(props: HumidityProps) {
   return (
     <div className="humidity">
-      <i className="wi wi-humidity"></i> {props.lang.words.humidity}
-      {props.humidity}%
+      <i className="wi wi-humidity"></i> 
+      {props.lang.weather.humidity}: {props.humidity}%
     </div>
   )
 }

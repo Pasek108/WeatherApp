@@ -7,13 +7,23 @@ type TemperatureProps = {
 }
 
 export default function Temperature(props: TemperatureProps) {
+  const colon = props.lang == null ? "" : ": "
+
+  const temperature_translation = props.lang?.weather.temperature || ""
+  const temperature = props.temperature.toFixed(2)
+
+  const feels_like_translation = props.lang?.weather.feels_like || ""
+  const feels_like = props.feels_like.toFixed(2)
+
   return (
     <>
       <div className="temperature">
-        <i className="wi wi-thermometer"></i> {props.temperature?.toFixed(2)} &deg;C
+        <i className="wi wi-thermometer"></i>
+        {temperature_translation}{colon} {temperature} &deg;C
       </div>
+
       <div className="feels-like">
-        {props.lang?.words.feels_like} {props.feels_like?.toFixed(2)} &deg;C
+        {feels_like_translation}{colon} {feels_like} &deg;C
       </div>
     </>
   )

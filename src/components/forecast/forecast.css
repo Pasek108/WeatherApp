@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 1350px;
   height: fit-content;
-  margin: 1rem 0;
+  padding: 1rem 2rem;
   color: white;
   overflow-x: hidden;
 }
@@ -17,8 +17,9 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  flex-grow: 1;
   width: 20%;
-  min-width: 300px;
+  min-width: 250px;
   height: fit-content;
   padding: 1rem;
   font-size: 1.5rem;
@@ -44,4 +45,10 @@
 
 .temperature-container .feels-like {
   color: #e3e3e3;
+}
+
+@media only screen and (max-width: 490px) {
+  .forecast {
+    padding: 1rem;
+  }
 }

@@ -1,18 +1,25 @@
 export type GeoName = {
-  adminCode1: string
-  lng: string
   geonameId: number
-  toponymName: string
-  countryId: string
-  fcl: string
-  population: number
-  countryCode: string
-  name: string
-  fclName: string
-  adminCodes1: any
-  countryName: string
-  fcodeName: string
-  adminName1: string
+
   lat: string
+  lng: string
+
+  name: string
+  toponymName: string
+
+  adminCodes1: any
+  adminCode1: string
+  adminName1: string
+
+  countryName: string
+  countryCode: string
+  countryId: string
+
+  population: number
+
   fcode: string
+  fcodeName: string
+
+  fcl: string
+  fclName: string
 }

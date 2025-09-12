@@ -8,8 +8,8 @@ type PressureProps = {
 export default function Pressure(props: PressureProps) {
   return (
     <div className="pressure">
-      <i className="wi wi-barometer"></i> {props.lang.words.pressure}
-      {props.pressure} hPa
+      <i className="wi wi-barometer"></i> 
+      {props.lang.weather.pressure}: {props.pressure} hPa
     </div>
   )
 }
