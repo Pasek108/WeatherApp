@@ -2,7 +2,7 @@ import type { GeoName } from "../../types/location_types"
 
 export default async function getLocations(search_value: string, language: string): Promise<GeoName[]> {
   const rows_limit = "20"
-  console.log(search_value, language)
+
   let url = new URL("https://secure.geonames.org/searchJSON")
   url.searchParams.append("q", search_value)
   url.searchParams.append("lang", language)
