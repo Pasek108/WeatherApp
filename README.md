@@ -30,7 +30,7 @@ Languages:
 - CSS
 
 Libraries and frameworks:
-- [React](https://legacy.reactjs.org/blog/2020/10/20/react-v17.html) 17.0.1
+- [React](https://legacy.reactjs.org/blog/2020/10/20/react-v17.html) 19.1.10
 - [Pirate Weather](https://pirateweather.net) 
 - [Geonames API](https://www.geonames.org).
 - [Erik Flowers Weather Icons](http://erikflowers.github.io/weather-icons/)
@@ -54,13 +54,10 @@ Programs:
 - Download this repository and:
   - Open project in VSCode
   - Run `npm install` to install all the dependencies
-  - Run  `npm start` to start development sever
+  - Run  `npm run dev` to start development sever
   - Open generated address in the browser
 
 - Deployment for GitHub:
   - Run `npm run build`
-  - Rename `/build` folder to `/docs`
-  - In `main.xxx.css` file replace all '/static' with '../media/'
-
-## Acknowledgements
-- This project was inspired by [this pen](https://codepen.io/Hyperplexed/pen/vYpXNJd).
+  - Rename generated `/dist` folder to `/docs`
+  - In `/docs/index.html` and `/docs/index-***.css` file replace all `/assets/` with `/Weather/assets/`
