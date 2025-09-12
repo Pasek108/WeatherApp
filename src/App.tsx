@@ -53,7 +53,7 @@ export default function App(props: AppProps) {
   const [sunrise, sunset] = getSunriseSunset(weather_data, current_day)
 
   return (
-    <main>
+    <main id="top">
       <header>
         <LocationSearch lang={language_data} location={location} loadWeatherForLocation={(location) => setLocation(location)} />
         <LanguageSelect lang={selected_language} changeLanguage={(e: React.ChangeEvent<HTMLSelectElement>) => setSelectedLanguage(e.target.value)} />

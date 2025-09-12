@@ -39,9 +39,9 @@ export default function Clock(props: ClockProps) {
         </div>
       </div>
 
-      <div className="show-current-weather" onClick={props.showCurrentWeather}>
+      <a href="#top" className="show-current-weather" onClick={props.showCurrentWeather}>
         {props.lang.commands.show_actual_weather}
-      </div>
+      </a>
     </div>
   )
 }

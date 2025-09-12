@@ -14,7 +14,7 @@ type ForecastProps = {
 
 export default function ForecastCard(props: ForecastProps) {
   return (
-    <div className="forecast-card blur" onClick={props.onClick}>
+    <a href="#top" className="forecast-card blur" onClick={props.onClick}>
       <DayName date={props.date} lang={props.lang} now={false} />
 
       <div className="icon">
@@ -24,6 +24,6 @@ export default function ForecastCard(props: ForecastProps) {
       <div className="temperature-container">
         <Temperature lang={null} temperature={props.temperature} feels_like={props.feels_like} />
       </div>
-    </div>
+    </a>
   )
 }
