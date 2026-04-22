@@ -25,10 +25,10 @@ export default function LocationSearch(props: LocationSearchProps) {
   useEffect(() => {
     document.addEventListener("click", handleClickOutside)
     return () => document.removeEventListener("click", handleClickOutside)
-  }, [])
+  })
 
   function handleClickOutside(evt: MouseEvent) {
-    if (searchInput.current && !searchInput.current.contains(evt.target as Node)) {
+    if (searchInput.current?.parentElement && !searchInput.current?.parentElement.contains(evt.target as Node)) {
       setSearchedLocation(getLocationString(props.location))
       setLocationsList([])
     }

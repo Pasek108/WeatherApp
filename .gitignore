@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # API KEY
-weather_api_key.js
+weather_api_key.ts

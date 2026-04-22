@@ -9,7 +9,7 @@ export default async function getWeather(location: GeoName, language: string): P
   const latitude = location.lat
   const longitude = location.lng
 
-  let url = new URL(`https://api.pirateweather.net/forecast/${API_KEY}/${latitude},${longitude}`)
+  const url = new URL(`https://api.pirateweather.net/forecast/${API_KEY}/${latitude},${longitude}`)
   url.searchParams.append("lang", language)
   url.searchParams.append("units", "ca")
   url.searchParams.append("exclude", "minutely,alerts,hourly,flags,summary")
