@@ -1,7 +1,7 @@
-<h1 align="center">Weather App - Readme</h1>
+<h1 align="center">Weather App</h1>
 <p align="center">
   <strong>
-    A modern React-based weather application providing real-time conditions and a 7-day forecast with location search.
+    A React-based weather app providing real-time conditions and a 7-day forecast with location search.
   </strong>
 </p>
 
