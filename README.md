@@ -26,16 +26,14 @@ Check out the [live version](https://pasek108.github.io/WeatherApp/).
 - Fully responsive layout  
 
 ## Technologies
-**Core:**
-- JavaScript
-- HTML
-- CSS
-
-**Libraries & APIs:**
-- React 19.1.10
+- CSS / JavaScript
+- [TypeScript](https://www.typescriptlang.org) 5.8.3
+- [Vite](https://vitejs.dev) 7.1.2
+- [React](https://react.dev) 19.1.1
 - [Pirate Weather](https://pirateweather.net) 
-- [Geonames API](https://www.geonames.org).
-- [Erik Flowers Weather Icons](http://erikflowers.github.io/weather-icons/) 
+- [Geonames API](https://www.geonames.org)
+- [Erik Flowers Weather Icons](http://erikflowers.github.io/weather-icons/)
+- [GoogleFonts](https://fonts.google.com)
 
 <!--
 ## Setup
